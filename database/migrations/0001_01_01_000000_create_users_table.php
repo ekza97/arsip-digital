@@ -17,6 +17,14 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            // Menandakan user ini bagian apa
+            $table->enum('division', ['perencanaan', 'keuangan', 'umum'])->default('umum');
+
+            // Menandakan level akses (Admin bisa hapus, Staf hanya upload/lihat)
+            $table->enum('role', ['admin', 'pimpinan', 'staff'])->default('staff');
+
+            // Status aktif (Jika pegawai mutasi, akun dinonaktifkan tanpa dihapus log-nya)
+            $table->boolean('is_active')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
