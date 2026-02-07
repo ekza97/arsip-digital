@@ -48,8 +48,8 @@
                 </div>
             </form>
 
-            <div class="auth-option text-center pt-3">Belum punya akun ? <a class="text-link"
-                    href="{{ route('register') }}">Buat akun</a>.</div>
+            {{-- <div class="auth-option text-center pt-3">Belum punya akun ? <a class="text-link"
+                    href="{{ route('register') }}">Buat akun</a>.</div> --}}
         </div><!--//auth-form-container-->
         {{-- <div class="mt-4">
             <a href="/" class="btn btn-block btn-warning text-white"><i class="fas fa-home me-2"></i>Kembali ke
